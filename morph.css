@@ -1,0 +1,128 @@
+body{
+    color: rgb(240, 240, 240);
+    font-family: Sora;
+    /* background: rgb(48, 49, 49); */
+    background-image: url("gggrain.svg");
+    background-repeat: none;
+    background-size: cover;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10rem;
+}
+.card{
+    width: 500px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.img-container{
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+}
+.img{
+    background: url("https://picfiles.alphacoders.com/668/66824.jpg");
+    /* background: url("https://images7.alphacoders.com/112/thumb-1920-1124067.jpg"); */
+    background-size: 160%;
+    background-position-x:center ;
+    height: 100%;
+    border-top-left-radius: 25px ;
+    border-top-right-radius: 25px ;
+    transition: background-size 0.3s ease-in-out;
+}
+.card .content{
+    position: absolute;
+    padding: 1rem;
+    bottom: 0;
+    height: 18%;
+    /* background: rgba(255, 255, 255, 0.15); */
+    background: #00000050;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 25px;
+    transition: height 0.3s ease-in-out;
+    
+}
+
+.content .description{
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.action-btn{
+    float: right;
+    padding:0.5rem 1rem ;
+    font-family: inherit;
+    background:#0AA0E2 ;
+    border: 0;
+    color: white;
+    border-radius: 15px;
+    font-size:1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.action-btn:hover{
+    background:#098fc8 ;
+}
+.card:hover .content{
+    height: 75%;
+}
+.card:hover .img{
+    background-size: 150%;
+}
+.card:hover .content .description{
+    opacity: 1;
+}
+
+.svg{
+    width: 500px;
+    height: 500px;
+    background-image: url("ffflux.svg");
+    opacity: 40%;
+    top: 100px;
+    left: 150px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: -1;
+}
+
+.animation{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        animation-name: example;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      
+}
+
+@keyframes example {
+    0%{
+        transform: rotate(10deg);
+        background-color: yellow;
+        border-radius: 50%;
+        background-image: radial-gradient(blue, green , pink, purple);
+    }
+    25%{
+        transform: rotate(100deg);
+        background-color: aqua;
+        opacity: 50%;
+        margin-left: 100px;
+    }
+    50%{
+        transform: rotate(180deg);
+        background-color: rgb(250, 0, 196);
+        border-radius: 50%;
+        transform: skew(1.5);
+  }
+  100%{
+    transform: scaleX(1.5);
+    border-radius: 50%;
+    border: 4px inset blue
+
+  }
+}
